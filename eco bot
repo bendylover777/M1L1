@@ -23,11 +23,11 @@ def eco_items(message):
 @bot.callback_query_handler(func=lambda call: call.data in ['btn1', 'btn2', 'btn3', 'btn4', 'btn5'])
 def handle_inline_keyboard(call):
     items = {
-        'btn1': '450 лет',
-        'btn2': 'до 2 лет',
-        'btn3': 'более 1000 лет',
-        'btn4': '500 лет',
-        'btn5': '2 года'
+        'btn1': 'пластиковая бутылка разлагается450 лет',
+        'btn2': 'кожура банана разлагается до 2 лет',
+        'btn3': 'стекло разлагается более 1000 лет',
+        'btn4': 'алюминиевая банка разлагается 500 лет',
+        'btn5': 'бумага разлагается 2 года'
     }
     bot.answer_callback_query(call.id)
     bot.send_message(call.message.chat.id, items[call.data])
